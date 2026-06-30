@@ -1,0 +1,9 @@
+real
+screen
+venv
+
+__pycache__
+
+*.pdf
+*.pkl
+debug.py
