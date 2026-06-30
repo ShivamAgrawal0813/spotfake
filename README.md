@@ -5,12 +5,10 @@ Given one image, decide if it's a **real photo** or a **photo of a screen** (som
 ## Results
 - **Accuracy:** 92.0% ± 6.8% (5-fold CV, 100-image dataset).
 - **Latency:** ~113 ms/image (112.76 ms median), laptop CPU.
-- **Cost:** free on-device; ~$1.50 per million images (~$0.0015/1,000) on a cheap cloud CPU instance, if ever needed.
-
-Full write-up: **[NOTE.md](./NOTE.md)**.
+- **Cost:** free on-device, ~$1.50 per million images (~$0.0015/1,000) on a cheap cloud CPU instance, if ever needed.
 
 ## How it works
-7 hand-crafted features per image (FFT peak energy, Laplacian variance, saturation skew/p95, LBP entropy, DCT block periodicity, highlight ratio) → `StandardScaler -> LogisticRegression`.
+7 hand-crafted features per image (FFT peak energy, Laplacian variance, saturation skew/p95, LBP entropy, DCT block periodicity, highlight ratio) → `LogisticRegression`.
 
 ## Files
 | File | What it does |
